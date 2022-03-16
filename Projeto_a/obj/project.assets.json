@@ -1015,9 +1015,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_Rest.csproj",
-      "projectName": "Projeto_Rest",
-      "projectPath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_Rest.csproj",
+      "projectUniqueName": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj",
+      "projectName": "Projeto_WDProducers",
+      "projectPath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj",
       "packagesPath": "C:\\Users\\Ygorb\\.nuget\\packages\\",
       "outputPath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\obj\\",
       "projectStyle": "PackageReference",

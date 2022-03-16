@@ -2,17 +2,15 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projeto_a.Data;
 
-namespace Projeto_a.Migrations
+namespace Projeto_WDProducers.Migrations
 {
-    [DbContext(typeof(DepartamentoContext))]
-    [Migration("20220311190306_initial")]
-    partial class initial
+    [DbContext(typeof(WDProducersContext))]
+    partial class WDProducersContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

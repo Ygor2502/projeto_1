@@ -30,13 +30,13 @@ namespace Projeto_a
         {
             String mySqlConnection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContextPool<DepartamentoContext>(option => option.UseMySql(mySqlConnection,
+            services.AddDbContextPool<WDProducersContext>(option => option.UseMySql(mySqlConnection,
                 ServerVersion.AutoDetect(mySqlConnection)));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Projeto_a", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Projeto_WD", Version = "v1" });
             });
         }
 
@@ -47,7 +47,7 @@ namespace Projeto_a
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Projeto_a v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Projeto_WD v1"));
             }
 
             app.UseHttpsRedirection();

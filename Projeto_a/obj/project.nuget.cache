@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UBMGxq+q7mZzXRi8wTmVLS5g9NKJZWWZK7szfZplb9GBd15ldHZ938SpDGnH1R2evWAVHp9rsL4yRq/nhsEHdA==",
+  "dgSpecHash": "EXBOi/3/y/K5hPh73TiBua8TbQ8WsmKV7QxinN0c/tuwK2XiyNzjLeREPhuUsqNjNTUjBOu5QQ3G5QYQNVdz2g==",
   "success": true,
-  "projectFilePath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_Rest.csproj",
+  "projectFilePath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ygorb\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ygorb\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -6,11 +6,11 @@ using System.Collections.Generic;
 
 namespace Projeto_a.Data
 {
-    public class DepartamentoContext : DbContext
+    public class WDProducersContext : DbContext
     {
         
 
-        public DepartamentoContext(DbContextOptions<DepartamentoContext> options) : base(options)
+        public WDProducersContext(DbContextOptions<WDProducersContext> options) : base(options)
         {
         }
             
@@ -47,18 +47,9 @@ namespace Projeto_a.Data
                 new Funcionario { Id = 1, Nome = "Joao", Foto = "Pmg", RG = 88888888},
                 new Funcionario { Id = 2, Nome = "Maria", Foto = "Pmg", RG = 77777777},
                 new Funcionario { Id = 3, Nome = "Pedro", Foto = "Pmg", RG = 99999999 });
-            
-
-
-
-       
-                
-                    
-                
-
-
-
+          
         }
 
+        
     }
 }

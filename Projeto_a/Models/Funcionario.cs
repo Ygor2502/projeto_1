@@ -4,6 +4,7 @@ namespace Projeto_a.Models
 {
     public class Funcionario
     {
+        
         public int Id { get; set; }
 
         public string Nome { get; set; }
@@ -12,12 +13,7 @@ namespace Projeto_a.Models
 
         public int RG { get; set; }
 
-        
         public Departamento Departamento { get; set; }
-
-
-        
-        
         
     }
 }
