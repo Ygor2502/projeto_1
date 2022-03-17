@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Projeto_a.Data;
 using Projeto_a.Models;
+using System;
 using System.Linq;
-
+using System.Threading.Tasks;
 
 namespace Projeto_WD.Controllers
 {
@@ -20,32 +21,34 @@ namespace Projeto_WD.Controllers
             _context = context;
         }
 
-
-
         [HttpGet]
-        [Route("MostrarTodos")]
-        public IActionResult Get()
+        [Route("")]
+        public async Task<IActionResult> Get()
         {
-            return Ok(_context.Funcionarios);
+            var funcionarios = await _context.Funcionarios.ToListAsync();
+            return Ok(funcionarios);
         }
 
 
         [HttpGet]
-        [Route("BuscarId")]
-        public IActionResult GetFuncId(int id)
+        [Route("byId")]
+        public async Task<IActionResult> GetFuncId([FromQuery] Guid id)
         {
-            var funcionario = _context.Funcionarios.FirstOrDefault(a => a.Id == id);
-            if (funcionario == null) return BadRequest("O Funcionario não foi encontrado");
+            var funcionario = await _context.Funcionarios.Where(a => a.Id.Equals(id)).FirstOrDefaultAsync();
+
+            if (funcionario == null) 
+                return BadRequest("O Funcionario não foi encontrado");
 
             return Ok(funcionario);
         }
 
         [HttpGet]
         [Route("BuscarNome")]
-        public IActionResult GetFuncName(string nome)
+        public async Task<IActionResult> GetFuncName(string nome)
         {
-            var funcionario = _context.Funcionarios.FirstOrDefault(a =>
-                a.Nome.Contains(nome));
+            var funcionario = await _context.Funcionarios.Where(a =>
+                a.Nome.Contains(nome)).FirstOrDefaultAsync();
+
             if (funcionario == null) return BadRequest("O Funcionario não foi encontrado");
 
             return Ok(funcionario);
@@ -62,9 +65,9 @@ namespace Projeto_WD.Controllers
 
         [HttpPut]
         [Route("")]
-        public IActionResult Put(int id, Funcionario funcionario)
+        public async Task<IActionResult> Put(Guid id, Funcionario funcionario)
         {
-            var func = _context.Funcionarios.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var func = await _context.Funcionarios.Where(a => a.Id == id).FirstOrDefaultAsync();
             if (func == null) return BadRequest("Funcionario não encontrado");
 
             _context.Update(funcionario);
@@ -74,7 +77,7 @@ namespace Projeto_WD.Controllers
 
         [HttpDelete]
         [Route("")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
             var funcionario = _context.Funcionarios.FirstOrDefault(a => a.Id == id);
             if (funcionario == null) return BadRequest("Funcionario não encontrado");

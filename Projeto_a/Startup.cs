@@ -30,8 +30,8 @@ namespace Projeto_a
         {
             String mySqlConnection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContextPool<WDProducersContext>(option => option.UseMySql(mySqlConnection,
-                ServerVersion.AutoDetect(mySqlConnection)));
+            services.AddDbContext<WDProducersContext>(
+                opt => opt.UseSqlite(Configuration.GetConnectionString("Default")));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

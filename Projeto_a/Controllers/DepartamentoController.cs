@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Projeto_a.Data;
 using Projeto_a.Models;
 using System.Linq;
-
+using System.Threading.Tasks;
 
 namespace Projeto_WD.Controllers
 {
@@ -19,16 +19,13 @@ namespace Projeto_WD.Controllers
             _context = context;
         }
 
-
-
-
         [HttpGet]
         [Route("")]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(_context.Departamentos);
+            var departamentos = await _context.Departamentos.ToListAsync();
+            return Ok(departamentos);
         }
-
 
         [HttpPost]
         [Route("")]
@@ -38,7 +35,6 @@ namespace Projeto_WD.Controllers
             _context.SaveChanges();
             return Ok(departamento);
         }
-
 
         [HttpPut]
         [Route("")]
@@ -51,7 +47,6 @@ namespace Projeto_WD.Controllers
             _context.SaveChanges();
             return Ok("Departamento cadastrado");
         }
-
 
         [HttpDelete]
         [Route("")]
@@ -67,8 +62,4 @@ namespace Projeto_WD.Controllers
 
     }
 
-}        
-
-    
-
-
+}

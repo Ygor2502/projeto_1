@@ -1,11 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Projeto_a.Models
 {
     public class Funcionario
     {
-        
-        public int Id { get; set; }
+        public Funcionario(string nome, string foto, int rG, Guid idDepartamento)
+        {
+            Id = Guid.NewGuid();
+            Nome = nome;
+            Foto = foto;
+            RG = rG;
+            IdDepartamento = idDepartamento;
+        }
+
+        public Guid Id { get; set; }
 
         public string Nome { get; set; }
 
@@ -13,7 +22,7 @@ namespace Projeto_a.Models
 
         public int RG { get; set; }
 
-        public Departamento Departamento { get; set; }
+        public Guid IdDepartamento { get; set; }
         
     }
 }

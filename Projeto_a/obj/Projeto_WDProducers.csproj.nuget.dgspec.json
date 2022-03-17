@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj": {}
+    "C:\\dev\\projeto_1\\Projeto_a\\Projeto_WDProducers.csproj": {}
   },
   "projects": {
-    "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj": {
+    "C:\\dev\\projeto_1\\Projeto_a\\Projeto_WDProducers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj",
+        "projectUniqueName": "C:\\dev\\projeto_1\\Projeto_a\\Projeto_WDProducers.csproj",
         "projectName": "Projeto_WDProducers",
-        "projectPath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\Projeto_WDProducers.csproj",
-        "packagesPath": "C:\\Users\\Ygorb\\.nuget\\packages\\",
-        "outputPath": "D:\\Projeto Evo\\Projeto_a\\Projeto_a\\obj\\",
+        "projectPath": "C:\\dev\\projeto_1\\Projeto_a\\Projeto_WDProducers.csproj",
+        "packagesPath": "C:\\Users\\edson\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\projeto_1\\Projeto_a\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ygorb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\edson\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +47,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -83,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
